@@ -24,14 +24,14 @@ export default function Experience({
       </div>
       <div className="flex flex-col gap-3">
         <div>
-          <h4 className="text-xl font-semibold tracking-tight">{title}</h4>
+          <h4 className="text-xl font-medium tracking-tight">{title}</h4>
           <p className="text-sm font-medium leading-none text-muted-foreground">
             {date}
           </p>
         </div>
         <div className="flex gap-2">
-          {tools.map((tool) => {
-            return <Badge variant="secondary">{tool}</Badge>;
+          {tools.map((tool, i) => {
+            return <Badge key={i} variant="secondary">{tool}</Badge>;
           })}
         </div>
       </div>

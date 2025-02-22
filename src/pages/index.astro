@@ -1,12 +1,45 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import "../styles/global.css"
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import { Instagram, Github, Linkedin, Mail } from "lucide-react";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Charlye Castro | Home"
+  description="Full Stack Software Engineer @ GoodRx and based in Seattle, Washington"
+>
+  <div class="w-full h-screen flex justify-center items-center">
+    <div
+      class="w-full flex flex-col justify-center items-center gap-4 max-w-[400px] text-center"
+    >
+      <h4 class="text-xl font-semibold tracking-tight">SOFTWARE ENGINEER</h4>
+      <h1 class="font-extrabold tracking-tight text-5xl">Charlye Castro</h1>
+      <p class="text-xl text-muted-foreground">
+        Full Stack Software Engineer @ GoodRx and based in Seattle, Washington
+      </p>
+      <div class="flex gap-2">
+        <a href="" class="hover:text-muted-foreground">
+          <Instagram />
+        </a>
+        <a
+          href="https://github.com/charlyecastro"
+          class="hover:text-muted-foreground"
+        >
+          <Github />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/charlyecastro/"
+          class="hover:text-muted-foreground"
+        >
+          <Linkedin />
+        </a>
+        <a
+          href="mailto:charlyecastro@gmail.com"
+          class="hover:text-muted-foreground"
+        >
+          <Mail />
+        </a>
+      </div>
+    </div>
+  </div>
 </Layout>

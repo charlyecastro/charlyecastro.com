@@ -8,7 +8,7 @@ import {
   SheetFooter,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import Socials from "@/components/Socials";
 import { Menu } from "lucide-react";
 
@@ -22,15 +22,15 @@ export default function Nav() {
         >
           CHARLYE CASTRO
         </a>
-        <ul className="hidden md:flex flex-row gap-4">
-          <li>
-            <a href="/about" className="leading-7 hover:text-muted-foreground">
-              About
-            </a>
-          </li>
+        <ul className="hidden md:flex flex-row gap-4 items-center">
           <li>
             <a href="/#work" className="leading-7 hover:text-muted-foreground">
               Work
+            </a>
+          </li>
+          <li>
+            <a href="/about" className="leading-7 hover:text-muted-foreground">
+              About
             </a>
           </li>
           <li>
@@ -39,6 +39,15 @@ export default function Nav() {
               className="hidden sm:block leading-7 hover:text-muted-foreground"
             >
               Resume
+            </a>
+          </li>
+          <li>
+            <a
+              href="/charlye-castro-resume.pdf"
+              target="_blank"
+              className={buttonVariants({ variant: "outline" })}
+            >
+              Download
             </a>
           </li>
         </ul>
@@ -71,16 +80,6 @@ export default function Nav() {
                 <SheetTrigger asChild>
                   <li>
                     <a
-                      href="/about"
-                      className="text-lg hover:text-muted-foreground"
-                    >
-                      About
-                    </a>
-                  </li>
-                </SheetTrigger>
-                <SheetTrigger asChild>
-                  <li>
-                    <a
                       href="/#work"
                       className="text-lg hover:text-muted-foreground"
                     >
@@ -91,11 +90,21 @@ export default function Nav() {
                 <SheetTrigger asChild>
                   <li>
                     <a
-                      href="../../public/charlye-castro-resume.pdf"
-                      target="_blank"
+                      href="/about"
                       className="text-lg hover:text-muted-foreground"
                     >
-                      Resume
+                      About
+                    </a>
+                  </li>
+                </SheetTrigger>
+                <SheetTrigger asChild>
+                  <li>
+                    <a
+                      href="/charlye-castro-resume.pdf"
+                      target="_blank"
+                      className={buttonVariants({ variant: "outline" })}
+                    >
+                      Get Resume
                     </a>
                   </li>
                 </SheetTrigger>

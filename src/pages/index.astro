@@ -1,102 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import {
-  Instagram,
-  Github,
-  Linkedin,
-  Mail,
-  ArrowUpRight,
-  ChevronDown,
-} from "lucide-react";
-import Experience from "../components/Experience.astro";
-import gdrx from "../assets/gdrx-logo.png";
-import limeade from "../assets/limeade-logo.png";
-import microsoft from "../assets/microsoft-logo.png";
-import recon from "../assets/recon-logo.png";
+import HeroSection from "@/components/HeroSection.astro";
+import WorkSection from "@/components/WorkSection.astro";
 ---
 
 <Layout
   title="Charlye Castro | Home"
   description="Full Stack Software Engineer @ GoodRx and based in Seattle, Washington"
 >
-  <section
-    id="home"
-    class="w-full h-screen flex flex-col justify-center items-center gap-30"
-  >
-    <div
-      class="w-full flex flex-col justify-center items-center gap-4 max-w-[400px] text-center"
-    >
-      <h4 class="text-xl font-semibold tracking-tight">SOFTWARE ENGINEER</h4>
-      <h1 class="font-extrabold tracking-tight text-5xl">Charlye Castro</h1>
-      <p class="text-xl text-muted-foreground">
-        Full Stack Software Engineer @ GoodRx and based in Seattle, Washington
-      </p>
-      <div class="flex gap-2">
-        <a href="" class="hover:text-muted-foreground">
-          <Instagram />
-        </a>
-        <a
-          href="https://github.com/charlyecastro"
-          class="hover:text-muted-foreground"
-        >
-          <Github />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/charlyecastro/"
-          class="hover:text-muted-foreground"
-        >
-          <Linkedin />
-        </a>
-        <a
-          href="mailto:charlyecastro@gmail.com"
-          class="hover:text-muted-foreground"
-        >
-          <Mail />
-        </a>
-      </div>
-    </div>
-    <a href="#work" class="hover:text-muted-foreground"><ChevronDown /></a>
-  </section>
-  <section
-    id="work"
-    class="w-full h-[90vh] flex flex-col justify-center items-center gap-10"
-  >
-    <h2 class="text-3xl font-semibold tracking-tight">Work History</h2>
-    <div class="flex flex-col gap-5">
-      <Experience
-        title="Software Engineer @ GoodRx"
-        date="April 2022 - Present"
-        logo={gdrx}
-        alt="GoodRx Logo"
-        url="https://goodrx.com"
-        tools={["Typescript", "React", "GraphQL", "Storybook"]}
-      />
-      <Experience
-        title="Software Engineer In Test @ Microsoft"
-        date="Oct 2020 - April 2022"
-        logo={microsoft}
-        alt="Microsoft Logo"
-        url="https://www.microsoft.com/en-us/"
-        tools={["Typescript", "React", "Python", "Selenium"]}
-      />
-      <Experience
-        title="Software Engineer @ Recon Dynamics"
-        date="June 2020 - Oct 2020"
-        logo={recon}
-        alt="Recon Dynamics Logo"
-        url="https://www.recondynamics.com/"
-        tools={["Javascript", "React Native", "iOS", "Android"]}
-      />
-      <Experience
-        title="Mobile Development Intern @ Limeade"
-        date="June 2019 - Sept 2019"
-        logo={limeade}
-        alt="Limeade Logo"
-        url="https://www.limeade.com/limeade-webmd-health-services/"
-        tools={["Swift", "Kotlin", "iOS", "Android"]}
-      />
-    </div>
-    <a><span>View Full Resume <ArrowUpRight className="inline" /></span></a>
-  </section>
+  <HeroSection />
+  <WorkSection />
 </Layout>

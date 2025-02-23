@@ -1,5 +1,6 @@
 ---
-import { Instagram, Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import Socials from "@/components/Socials";
 ---
 
 <section
@@ -14,29 +15,7 @@ import { Instagram, Github, Linkedin, Mail, ChevronDown } from "lucide-react";
     <p class="text-xl text-muted-foreground">
       Full Stack Software Engineer @ GoodRx and based in Seattle, Washington
     </p>
-    <div class="flex gap-2">
-      <a href="" class="hover:text-muted-foreground">
-        <Instagram />
-      </a>
-      <a
-        href="https://github.com/charlyecastro"
-        class="hover:text-muted-foreground"
-      >
-        <Github />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/charlyecastro/"
-        class="hover:text-muted-foreground"
-      >
-        <Linkedin />
-      </a>
-      <a
-        href="mailto:charlyecastro@gmail.com"
-        class="hover:text-muted-foreground"
-      >
-        <Mail />
-      </a>
-    </div>
+    <Socials iconClass="hover:text-muted-foreground" />
   </div>
   <a href="#work" class="hover:text-muted-foreground"><ChevronDown /></a>
 </section>

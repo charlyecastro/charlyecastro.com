@@ -9,7 +9,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, Instagram, Github, Mail, Linkedin } from "lucide-react";
+import Socials from "@/components/Socials";
+import { Menu } from "lucide-react";
 
 export default function Nav() {
   return (
@@ -86,39 +87,18 @@ export default function Nav() {
                 </SheetTrigger>
                 <SheetTrigger asChild>
                   <li>
-                    <a
-                      href="/"
-                      className="text-lg hover:text-muted-foreground"
-                    >
+                    <a href="/" className="text-lg hover:text-muted-foreground">
                       Resume
                     </a>
                   </li>
                 </SheetTrigger>
               </ul>
               <SheetFooter>
-                <div class="flex gap-2 w-full justify-center">
-                  <a href="" class="text-muted-foreground">
-                    <Instagram size={20} />
-                  </a>
-                  <a
-                    href="https://github.com/charlyecastro"
-                    class="text-muted-foreground"
-                  >
-                    <Github size={20} />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/charlyecastro/"
-                    class="text-muted-foreground"
-                  >
-                    <Linkedin size={20} />
-                  </a>
-                  <a
-                    href="mailto:charlyecastro@gmail.com"
-                    class="text-muted-foreground"
-                  >
-                    <Mail size={20} />
-                  </a>
-                </div>
+                <Socials
+                  className="w-full justify-center"
+                  iconSize={20}
+                  iconClass="text-muted-foreground"
+                />
               </SheetFooter>
             </SheetContent>
           </Sheet>

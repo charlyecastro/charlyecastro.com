@@ -3,6 +3,7 @@ const { title, description } = Astro.props;
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -23,7 +24,7 @@ import { ClientRouter } from "astro:transitions";
     <title>Charlye Castro</title>
   </head>
   <body>
-    <div class="container mx-auto! px-4!">
+    <div id="layout" class="container mx-auto! px-4!">
       <ClientRouter />
       <Nav client:load />
       <slot />

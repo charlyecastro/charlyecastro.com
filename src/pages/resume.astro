@@ -1,0 +1,134 @@
+---
+import ResumeExperience from "@/components/ResumeExperience.astro";
+import ResumeSkills from "@/components/ResumeSkills.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/resume.css";
+---
+
+<Layout title="Charlye Castro | Resume" description="View My Full Resume">
+  <div id="resume" class="max-w-3xl mx-auto pb-6">
+    <header class="text-center">
+      <h1 class="text-3xl font-bold">Charlye Castro</h1>
+      <p class="text-xl font-medium text-secondary-foreground">
+        Software Engineer
+      </p>
+      <p class="text-sm text-gray-500">
+        Seattle, WA | charlyecastro@gmail.com | linkedin.com/in/charlyecastro/ |
+        charlyecastro.com
+      </p>
+    </header>
+
+    <hr class="border-gray-200 my-3" />
+
+    <section>
+      <h2 class="text-xl font-semibold">Education</h2>
+      <ResumeExperience
+        company="University of Washington"
+        location="Seattle, WA"
+        position="Bachelor of Science in Informatics"
+        date="Sept 2015 - June 2019"
+        bullets={[]}
+      />
+    </section>
+
+    <hr class="border-gray-200 my-3" />
+
+    <section>
+      <h2 class="text-xl font-semibold">Experience</h2>
+      <div class="flex flex-col gap-2">
+        <ResumeExperience
+          company="GoodRx"
+          location="Seattle, WA"
+          position="Software Engineer III"
+          date="Oct 2023 - Present"
+          bullets={[
+            "Developed and maintaine full-stack applications for cost savings on prescriptions",
+            "Optimized performance and scalability of existing systems",
+            "Optimized performance and scalability of existing systems",
+          ]}
+        />
+        <ResumeExperience
+          company="GoodRx"
+          location="Seattle, WA"
+          position="Software Engineer II"
+          date="Apiril 2022 - Oct 2023"
+          bullets={[
+            "Developed and maintaine full-stack applications for cost savings on prescriptions",
+            "Optimized performance and scalability of existing systems",
+            "Optimized performance and scalability of existing systems",
+          ]}
+        />
+        <ResumeExperience
+          company="Microsoft"
+          location="Redmond, WA"
+          position="Software Engineer In Test - Contract"
+          date="Oct 2020 - April 2022"
+          bullets={[
+            "Developed a multi-platform test framework that was utilized across multiple internal products",
+            "Maintained and implemented software tests and pipelines that ensured 99% reliability every 24 hours",
+            "Collaborated with multiple teams to build out testing plans and resolved important product test issues",
+          ]}
+        />
+        <ResumeExperience
+          company="Recon Dynamics"
+          location="Seattle, WA"
+          position="Mobile Developer - Contract"
+          date="June 2020 - Oct 2020"
+          bullets={[
+            "Improved the experience and versatility of an asset tracking mobile application used for construction jobs",
+            "Built offline sync to complete uploads once connection is restored, increasing the productivity of clients",
+            "Redesigned the app to be responsive for any device, increasing client base and improving user experience",
+          ]}
+        />
+        <ResumeExperience
+          company="Limeade"
+          location="Bellevue, WA"
+          position="Mobile Development Intern"
+          date="Juney 2019 - Sept 2020"
+          bullets={[
+            "Delivered UX/UI improvements for Android and iOS apps, enhancing the experience of over 1 million users",
+            "Implemented Single Sign-On and a friendly survey UI, thus speeding up the experience and task completion",
+            "Preserved excellent code quality by contributing to code reviews, writing tests and resolving product bugs",
+          ]}
+        />
+      </div>
+    </section>
+
+    <hr class="border-gray-200 my-3" />
+
+    <section>
+      <h2 class="text-xl font-semibold">Skills</h2>
+      <ResumeSkills
+        skills={[
+          "Typescript",
+          "React",
+          "Next",
+          "Astro",
+          "Node",
+          "GraphQL",
+          "Python",
+          "Go",
+          "Java",
+          "SQL",
+          "NoSQL",
+          "Selenium",
+          "Docker",
+          "AWS",
+          "Contentful",
+          "Tailwinds",
+          "Git",
+          "HTML",
+          "CSS",
+          "JS",
+          "Jest",
+          "Kotlin",
+          "Swift",
+          "React Native",
+          "Linux",
+          "PNPM",
+
+        ]}
+      />
+    </section>
+  </div>
+</Layout>

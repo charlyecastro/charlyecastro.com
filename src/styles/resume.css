@@ -1,0 +1,24 @@
+@media print {
+    @page {
+      margin: 0;
+    }
+    #skills-list {
+      gap: 4px;
+    }
+    #skills-list > span {
+      padding: 4px;
+    }
+  
+    #nav, footer {
+      display: none;
+    }
+  
+    #layout {
+      max-width: fit-content !important;
+    }
+  
+    #resume {
+      margin-top: 24px !important;
+      padding: 24px !important;
+    }
+  }

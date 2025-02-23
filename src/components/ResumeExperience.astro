@@ -1,0 +1,29 @@
+---
+interface Props {
+  company: string;
+  location: string;
+  position: string;
+  date: string;
+  bullets: string[];
+}
+
+const { company, location, position, date, bullets } = Astro.props;
+---
+
+<div>
+  <div class="w-full flex justify-between">
+    <h3 class="font-semibold">{company}</h3>
+    <h3 class="font-semibold">{location}</h3>
+  </div>
+  <div class="w-full flex justify-between">
+    <p class="text-sm text-gray-500">{position}</p>
+    <p class="text-sm text-gray-500">{date}</p>
+  </div>
+  <ul class="list-disc list-inside mt-1 text-sm">
+    {
+      bullets.map((bullet) => {
+        return <li>{bullet}</li>;
+      })
+    }
+  </ul>
+</div>

@@ -14,7 +14,7 @@ import { Menu } from "lucide-react";
 
 export default function Nav() {
   return (
-    <div className="sticky top-0">
+    <div id="nav" className="sticky top-0">
       <nav className="flex flex-row justify-between items-center py-2 bg-white">
         <a
           href="/#home"
@@ -34,7 +34,10 @@ export default function Nav() {
             </a>
           </li>
           <li>
-            <a href="/" className="leading-7 hover:text-muted-foreground">
+            <a
+              href="/resume"
+              className="hidden sm:block leading-7 hover:text-muted-foreground"
+            >
               Resume
             </a>
           </li>
@@ -87,7 +90,11 @@ export default function Nav() {
                 </SheetTrigger>
                 <SheetTrigger asChild>
                   <li>
-                    <a href="/" className="text-lg hover:text-muted-foreground">
+                    <a
+                      href="../../public/charlye-castro-resume.pdf"
+                      target="_blank"
+                      className="text-lg hover:text-muted-foreground"
+                    >
                       Resume
                     </a>
                   </li>

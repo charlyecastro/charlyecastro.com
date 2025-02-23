@@ -33,7 +33,7 @@ export default function Nav() {
             </a>
           </li>
           <li>
-            <a href="#" className="leading-7 hover:text-muted-foreground">
+            <a href="/" className="leading-7 hover:text-muted-foreground">
               Resume
             </a>
           </li>

@@ -13,7 +13,7 @@ export default function Socials({ className, iconClass, iconSize }: Props) {
     <div class={cn("flex gap-2", className)}>
       <a
         aria-label="Instagram"
-        href="https://github.com/charlyecastro"
+        href="https://www.instagram.com/charlyecastro/"
         class={iconClass}
       >
         <Instagram size={iconSize} />

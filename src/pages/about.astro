@@ -1,0 +1,88 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import { Mail } from "lucide-react";
+import { Image } from "astro:assets";
+import myPhoto from "../assets/charlye.jpeg";
+import { Badge } from "@/components/ui/badge";
+---
+
+<Layout
+  title="Charlye Castro | About"
+  description="A little about me: Software Engineeer, UW Class of 2019, etc."
+>
+  <section
+    id="about"
+    class="w-full md:h-[88vh] flex flex-col justify-center items-center"
+  >
+    <div
+      class="flex flex-col-reverse md:flex-row my-2 gap-6 md:gap-10 max-w-[800px] h-full items-center justify-center"
+    >
+      <div class="w-full flex flex-col gap-4">
+        <h1 class="font-extrabold tracking-tight text-5xl">Hi, I'm Charlye</h1>
+        <p class="leading-7">
+          I'm a Full Stack Software Engineer on the GoodRx Brand Drug Solutions
+          Team, focused on building products for both B2C and B2B customers. I
+          graduated from the University of Washington Class of 2019, majoring in
+          Informatics.
+        </p>
+        <p class="leading-7">
+          I'm from Manson, Washington, where I grew up and helped out my parents
+          in agrictultire work alongisde my siblings. From doodles on menus and
+          placemats to sculptures from cardboard boxes, packaging tape, and
+          zip-ties, I found passion in creativity.
+        </p>
+        <p class="leading-7">
+          Outside of work, I’m passionate about Soccerstaying creative through
+          arts and crafts such as painting, pottery, and 3D modeling and
+          printing, which keep my design thinking fresh and inspire me to bring
+          unique perspectives to my work. I also love staying active through
+          boxing, snowboarding, and playing volleyball.
+        </p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <Image
+          src={myPhoto}
+          alt="A photo of me"
+          class="w-full md:w-[400px] aspect-[16/9] md:aspect-square object-cover rounded-md"
+        />
+        <h5 class="text-lg font-medium text-muted-foreground">
+          A LITTLE ABOUT ME
+        </h5>
+        <div class="flex flex-wrap md:flex-col w-full gap-2">
+          <Badge variant="secondary">
+            <p class="text-sm min-w-fit">
+              <span class="text-lg md:text-md">💻</span> Software Engineer
+            </p>
+          </Badge>
+          <Badge variant="secondary">
+            <p class="text-sm min-w-fit">
+              <span class="text-lg md:text-md">🎓</span> UW Class of 2019
+            </p>
+          </Badge>
+          <Badge variant="secondary">
+            <p class="text-sm min-w-fit">
+              <span class="text-lg md:text-md">🏡</span> Seattle & Manson
+            </p>
+          </Badge>
+          <Badge variant="secondary">
+            <p class="text-sm min-w-fit">
+              <span class="text-lg md:text-md">🇲🇽</span> Mexican American
+            </p>
+          </Badge>
+          <Badge variant="secondary">
+            <p class="text-sm min-w-fit">
+              <span class="text-lg md:text-md">⚽</span> Love Soccer
+            </p>
+          </Badge>
+        </div>
+      </div>
+    </div>
+    <a
+      href="mailto:charlyecastro@gmail.com"
+      class=" text-lg font-medium hover:text-muted-foreground my-8 flex justify-center items-center gap-2"
+    >
+      <span>Say Hello </span><Mail className="inline" size={20} />
+    </a>
+  </section>
+</Layout>

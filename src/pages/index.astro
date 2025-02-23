@@ -9,7 +9,11 @@ import {
   ArrowUpRight,
   ChevronDown,
 } from "lucide-react";
-import Experience from "../components/Experience/Experience";
+import Experience from "../components/Experience.astro";
+import gdrx from "../assets/gdrx-logo.png";
+import limeade from "../assets/limeade-logo.png";
+import microsoft from "../assets/microsoft-logo.png";
+import recon from "../assets/recon-logo.png";
 ---
 
 <Layout
@@ -63,28 +67,32 @@ import Experience from "../components/Experience/Experience";
       <Experience
         title="Software Engineer @ GoodRx"
         date="April 2022 - Present"
-        logo="./gdrx-logo.png"
+        logo={gdrx}
+        alt="GoodRx Logo"
         url="https://goodrx.com"
         tools={["Typescript", "React", "GraphQL", "Storybook"]}
       />
       <Experience
         title="Software Engineer In Test @ Microsoft"
         date="Oct 2020 - April 2022"
-        logo="./microsoft-logo.png"
+        logo={microsoft}
+        alt="Microsoft Logo"
         url="https://www.microsoft.com/en-us/"
         tools={["Typescript", "React", "Python", "Selenium"]}
       />
       <Experience
         title="Software Engineer @ Recon Dynamics"
         date="June 2020 - Oct 2020"
-        logo="./recon-logo.png"
+        logo={recon}
+        alt="Recon Dynamics Logo"
         url="https://www.recondynamics.com/"
         tools={["Javascript", "React Native", "iOS", "Android"]}
       />
       <Experience
         title="Mobile Development Intern @ Limeade"
         date="June 2019 - Sept 2019"
-        logo="./limeade-logo.png"
+        logo={limeade}
+        alt="Limeade Logo"
         url="https://www.limeade.com/limeade-webmd-health-services/"
         tools={["Swift", "Kotlin", "iOS", "Android"]}
       />

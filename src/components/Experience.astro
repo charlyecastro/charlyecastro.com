@@ -1,0 +1,47 @@
+---
+import { Badge } from "@/components/ui/badge";
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  date: string;
+  logo: any;
+  alt: string;
+  url: string;
+  tools: string[];
+}
+
+
+const { title, date, logo, alt, url, tools } = Astro.props;
+---
+
+<div class="flex gap-2">
+  <div class="h-full flex flex-col justify-start">
+    <a href={url}>
+      <Image
+        src={logo}
+        alt={alt}
+        class="w-[45px] h-[45-px]"
+      />
+    </a>
+  </div>
+  <div class="flex flex-col gap-3">
+    <div>
+      <h4 class="text-xl font-medium tracking-tight">{title}</h4>
+      <p class="text-sm font-medium leading-none text-muted-foreground">
+        {date}
+      </p>
+    </div>
+    <div class="flex gap-2">
+      {
+        tools.map((tool, i) => {
+          return (
+            <Badge key={i} variant="secondary">
+              {tool}
+            </Badge>
+          );
+        })
+      }
+    </div>
+  </div>
+</div>

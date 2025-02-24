@@ -17,11 +17,19 @@ const { title, description, url } = Astro.props;
     <meta name="author" content="Charlye Castro" />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="index, follow" />
+
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://charlyecastro.com/favicon.svg" />
     <meta property="og:url" content={url || "https://charlyecastro.com"} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Charlye Castro">
+
+    <meta property="twitter:image" content="https://charlyecastro.com/favicon.svg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Charlye Castro</title>
   </head>

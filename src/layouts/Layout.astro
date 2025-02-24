@@ -1,9 +1,10 @@
 ---
-const { title, description } = Astro.props;
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
+
+const { title, description, url } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,7 +19,8 @@ import "../styles/global.css";
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://charlyecastro.com" />
+    <meta property="og:image" content="https://charlyecastro.com/favicon.svg" />
+    <meta property="og:url" content={url || "https://charlyecastro.com"} />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Charlye Castro</title>

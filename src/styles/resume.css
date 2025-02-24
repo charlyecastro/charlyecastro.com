@@ -3,10 +3,10 @@
       margin: 0;
     }
     #skills-list {
-      gap: 4px;
+      gap: 2px;
     }
     #skills-list > span {
-      padding: 4px;
+      padding: 2px;
     }
   
     #nav, footer {
@@ -20,5 +20,6 @@
     #resume {
       margin-top: 24px !important;
       padding: 24px !important;
+      border: none;
     }
   }

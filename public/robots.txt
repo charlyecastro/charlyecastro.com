@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://charlyecastro.com/sitemap.xml

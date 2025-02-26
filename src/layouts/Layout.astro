@@ -5,7 +5,14 @@ import Footer from "@/components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 
-const { title, description, url } = Astro.props;
+interface Props {
+  title: string;
+  description: string;
+  url?: string;
+  shouldIndex: boolean;
+}
+
+const { title, description, url, shouldIndex } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,7 +24,10 @@ const { title, description, url } = Astro.props;
     <meta name="description" content={description} />
     <meta name="author" content="Charlye Castro" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="robots"
+      content={shouldIndex ? "index, follow" : "noindex, nofollow"}
+    />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -37,8 +47,8 @@ const { title, description, url } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Charlye Castro</title>
   </head>
-  <body>
-    <div id="layout" class="container mx-auto! px-4!">
+  <body class="flex flex-col min-h-screen">
+    <div id="layout" class="container mx-auto! px-4! flex flex-col grow">
       <ClientRouter />
       <Nav client:load />
       <slot />
